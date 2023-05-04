@@ -13,6 +13,7 @@ struct ContentView: View {
         Button("Visit Apple") {
         openURL(URL (string: "https://www.apple.com")!)
         }
+        Text("Hope you arae having fun in England")
     }
 }
 
