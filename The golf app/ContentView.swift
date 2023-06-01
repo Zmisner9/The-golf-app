@@ -1,9 +1,6 @@
 import SwiftUI
 import UIKit
 
-   
-
-
 struct GolfButtonLayout: View {
     let links: [String] = [
         "https://www.youtube.com/watch?v=xG66WXfnCTg", // Slice improvement video link
@@ -15,6 +12,7 @@ struct GolfButtonLayout: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Group {  Button(action: {
                 // Open the Slice improvement video link
                 openLink(url: links[0])
@@ -22,29 +20,32 @@ struct GolfButtonLayout: View {
                 Text("Slice Fix")
                     .italic()
                     .bold()
+                    .padding()
             }
                 Image("Slice Fix")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 75)
+                    .frame(width: 200, height: 50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .padding(.bottom, 50)
+                    
             }
-            Spacer(minLength: 2)
-            Group {  Button(action: {
+            Spacer()
+            Group {
+                Button(action:{
                 // Open the Hook improvement video link
                 openLink(url: links[1])
             }) {
                 Text("Hook Fix")
                     .italic()
                     .bold()
+                    .padding()
             }
                 Image("Hook Fix")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 75)
+                    .frame(width: 200, height: 50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .padding(.bottom, 50)
+                    
             }
             Spacer()
             Group {   Button(action: {
@@ -58,9 +59,9 @@ struct GolfButtonLayout: View {
                 Image("Top Fix")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 75)
+                    .frame(width: 200, height: 50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .padding(.bottom, 50)
+                    
             }
                 Spacer()
             Group {    Button(action: {
@@ -70,13 +71,14 @@ struct GolfButtonLayout: View {
                 Text("Chunk Fix")
                     .italic()
                     .bold()
+                    .padding()
             }
                 Image("Chunk Fix")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 75)
+                    .frame(width: 200, height: 50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .padding(.bottom, 50)
+             
             }
                 Spacer()
             Group {   Button(action: {
@@ -86,15 +88,16 @@ struct GolfButtonLayout: View {
                 Text("Shank Fix")
                     .italic()
                     .bold()
+                    .padding()
             }
                 Image("Shank Fix")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 75)
+                    .frame(width: 200, height: 50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .padding(.bottom, 50)
+                   
             }
-            Spacer()
+         
         }
     }
     
@@ -119,4 +122,3 @@ struct GolfApp_Previews: PreviewProvider {
         GolfButtonLayout()
     }
 }
-
