@@ -15,36 +15,86 @@ struct GolfButtonLayout: View {
     
     var body: some View {
         VStack {
-            Button(action: {
+            Group {  Button(action: {
                 // Open the Slice improvement video link
                 openLink(url: links[0])
             }) {
                 Text("Slice Fix")
+                    .italic()
+                    .bold()
             }
-            Button(action: {
+                Image("Slice Fix")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 200, height: 75)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding(.bottom, 50)
+            }
+            Spacer(minLength: 2)
+            Group {  Button(action: {
                 // Open the Hook improvement video link
                 openLink(url: links[1])
             }) {
                 Text("Hook Fix")
+                    .italic()
+                    .bold()
             }
-            Button(action: {
+                Image("Hook Fix")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 200, height: 75)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding(.bottom, 50)
+            }
+            Spacer()
+            Group {   Button(action: {
                 // Open the Top improvement video link
                 openLink(url: links[2])
             }) {
                 Text("Top Fix")
+                    .italic()
+                    .bold()
             }
-            Button(action: {
+                Image("Top Fix")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 200, height: 75)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding(.bottom, 50)
+            }
+                Spacer()
+            Group {    Button(action: {
                 // Open the Chunk improvement video link
                 openLink(url: links[3])
             }) {
                 Text("Chunk Fix")
+                    .italic()
+                    .bold()
             }
-            Button(action: {
+                Image("Chunk Fix")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 200, height: 75)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding(.bottom, 50)
+            }
+                Spacer()
+            Group {   Button(action: {
                 // Open the Shank improvement video link
                 openLink(url: links[4])
             }) {
                 Text("Shank Fix")
+                    .italic()
+                    .bold()
             }
+                Image("Shank Fix")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 200, height: 75)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding(.bottom, 50)
+            }
+            Spacer()
         }
     }
     
